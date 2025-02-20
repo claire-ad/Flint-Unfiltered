@@ -1059,11 +1059,17 @@ figcaption {
 }
 
 .top {
+  box-sizing: border-box;
+  aspect-ratio: auto;
+  object-fit: fill;
   background-image: linear-gradient(#0000, #222), linear-gradient(#00000080, #00000080), url('../images/sink-water.jpg');
   background-position: 0 0, 0 0, 50% 0;
   background-size: auto, auto, cover;
   background-attachment: scroll, scroll, fixed;
-  min-height: 650px;
+  min-width: auto;
+  min-height: 600px;
+  display: block;
+  position: static;
   overflow: clip;
 }
 
@@ -1118,6 +1124,7 @@ figcaption {
 }
 
 .container-7 {
+  margin-top: 100px;
   margin-bottom: 40px;
   position: relative;
   top: -160px;
@@ -1152,7 +1159,7 @@ figcaption {
 ._3-home-stories {
   min-height: 300px;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: -30px;
 }
 
 .grid {
@@ -1167,13 +1174,15 @@ figcaption {
 }
 
 .grid-2 {
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   grid-template: "Area"
-  / 1fr 1fr 1fr;
+                 "."
+                 / 1fr 1fr 1fr;
   align-content: stretch;
   margin-left: 20px;
   margin-right: 20px;
+  padding: 10px;
 }
 
 .grid-3 {
@@ -1181,6 +1190,7 @@ figcaption {
   grid-row-gap: 6px;
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr;
+  padding-bottom: 60px;
 }
 
 .text-block-2 {
@@ -1229,8 +1239,8 @@ figcaption {
   background-image: none;
   background-size: auto;
   background-clip: border-box;
-  width: 338px;
-  height: 220px;
+  width: 300px;
+  height: 180px;
   position: static;
   overflow: clip;
 }
@@ -1238,6 +1248,8 @@ figcaption {
 .image {
   aspect-ratio: auto;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
@@ -1395,7 +1407,11 @@ figcaption {
 }
 
 .section-6 {
-  min-height: 500px;
+  background-image: url('../images/sink-water-falling-3.png');
+  background-position: 0 0;
+  background-size: cover;
+  min-height: 2000px;
+  margin-top: 80px;
 }
 
 .quick-stack {
@@ -1486,6 +1502,65 @@ figcaption {
   left: 270px;
 }
 
+.image-7 {
+  padding-left: 140px;
+  position: relative;
+}
+
+.body-3 {
+  min-width: auto;
+}
+
+.background-video {
+  position: fixed;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+}
+
+.image-10 {
+  position: relative;
+}
+
+.section-8 {
+  height: 10px;
+}
+
+.image-11 {
+  width: 40%;
+  position: relative;
+  top: 60px;
+  left: 300px;
+}
+
+.section-9 {
+  min-height: 720px;
+}
+
+.container-17 {
+  width: 30%;
+  position: relative;
+  top: 250px;
+  right: 250px;
+}
+
+.container-18 {
+  width: 30%;
+}
+
+.video-3 {
+  top: 0;
+  right: 0;
+}
+
+.text-block-6 {
+  position: relative;
+  top: 300px;
+  left: 200px;
+}
+
 @media screen and (max-width: 991px) {
   .navigation {
     z-index: 999;
@@ -1520,16 +1595,23 @@ figcaption {
   }
 
   .navigation-link {
-    background-color: #fff;
+    text-align: left;
+    background-color: #0000;
     justify-content: flex-end;
-    height: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
+    height: 20px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10px;
+    line-height: 12px;
+    display: block;
   }
 
   .navigation-link-text {
-    font-size: 18px;
-    line-height: 24px;
+    text-align: right;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .navigation-hover {
@@ -1546,10 +1628,24 @@ figcaption {
   }
 
   .nav-menu {
-    background-color: #fff;
-    margin-top: -90px;
-    padding-top: 120px;
-    padding-bottom: 30px;
+    text-align: right;
+    object-fit: contain;
+    background-color: #0009;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 30px;
+    max-width: 30px;
+    height: 5%;
+    max-height: 110px;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    position: absolute;
+    inset: 0% 0% auto auto;
+    overflow: visible;
     box-shadow: 0 5px 20px #00000040;
   }
 
@@ -1633,18 +1729,124 @@ figcaption {
     padding-top: 150px;
   }
 
+  ._3-home-stories {
+    margin-bottom: -54px;
+  }
+
+  .grid-2 {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+  }
+
   .grid-3 {
     grid-template-columns: .25fr;
+    place-content: stretch center;
+  }
+
+  .title-label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .container-9 {
+    box-sizing: border-box;
+    aspect-ratio: auto;
+    object-fit: cover;
+    width: 240px;
+    overflow: clip;
+  }
+
+  .paragraph-2 {
+    text-align: left;
+    width: 100%;
+  }
+
+  .dropdown-link-2 {
+    padding: 10px;
+  }
+
+  .quick-stack {
+    width: 90%;
+    min-width: 90%;
+  }
+
+  .image-6 {
+    margin-top: 20px;
+    padding-top: 40px;
+  }
+
+  .menu-button-2 {
+    border: 1px solid #0000;
+  }
+
+  .icon-4 {
+    color: #fff;
+    border: 1px solid #0000;
+  }
+
+  .dropdown-2 {
+    text-align: right;
+    display: block;
+  }
+
+  .image-8, .image-9 {
+    padding-top: 40px;
+  }
+
+  .section-8 {
+    height: 50px;
+  }
+
+  .image-11 {
+    vertical-align: baseline;
+    width: 50%;
+    margin-top: 60px;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 191px;
+    overflow: visible;
+  }
+
+  .section-9 {
+    min-height: 600px;
+  }
+
+  .container-17 {
+    width: 30%;
+    position: relative;
+    top: 250px;
+    right: 230px;
+  }
+
+  .container-18 {
+    width: 30%;
+    position: relative;
+    top: 300px;
+    right: -200px;
+  }
+
+  .video-3 {
+    top: 0;
+    right: 0;
+  }
+
+  .text-block-6 {
+    top: 0;
+    left: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
   .navigation {
-    height: 75px;
+    height: 40px;
   }
 
   .footer-title-text {
     margin-bottom: 15px;
+    font-size: 8px;
+    line-height: 10px;
   }
 
   .footer-links {
@@ -1658,7 +1860,7 @@ figcaption {
   }
 
   .footer-categories {
-    display: none;
+    display: block;
   }
 
   .footer-newsletter {
@@ -1677,6 +1879,11 @@ figcaption {
   .team, .contact {
     padding-top: 90px;
     padding-bottom: 90px;
+  }
+
+  .footer-small-text {
+    font-size: 8px;
+    line-height: 10px;
   }
 
   .dropdown {
@@ -1775,6 +1982,82 @@ figcaption {
     width: 50%;
     margin-top: auto;
   }
+
+  .top {
+    background-image: linear-gradient(180deg, transparent, #222), linear-gradient(to bottom, null, null), url('../images/sink-water.jpg');
+    background-position: 0 0, 0 0, 50%;
+    min-height: 400px;
+  }
+
+  .intro {
+    height: 5px;
+    min-height: 5px;
+    display: block;
+  }
+
+  .container-4 {
+    display: none;
+  }
+
+  .hero-heading {
+    height: 100px;
+    font-size: 30px;
+    line-height: 36px;
+    top: -25%;
+  }
+
+  .hero-heading-2 {
+    margin-top: 117px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  ._3-home-stories {
+    margin-bottom: -3px;
+  }
+
+  .grid-2 {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-3 {
+    padding-bottom: 20px;
+  }
+
+  .title-label {
+    line-height: 20px;
+  }
+
+  .story-headline {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .paragraph-2 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .quick-stack {
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+
+  .image-11 {
+    width: 70%;
+    left: 74px;
+  }
+
+  .container-17 {
+    top: 125px;
+    right: 167px;
+  }
+
+  .container-18 {
+    top: 167px;
+    right: -122px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1783,8 +2066,8 @@ figcaption {
   }
 
   .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 10px;
+    padding-bottom: 0;
   }
 
   .top-section {
@@ -1794,7 +2077,9 @@ figcaption {
 
   .footer-title-text {
     width: 100%;
-    margin-top: 20px;
+    margin-top: -48px;
+    margin-bottom: -12px;
+    display: none;
   }
 
   .footer-links {
@@ -1807,6 +2092,10 @@ figcaption {
     flex-wrap: wrap;
     align-content: flex-start;
     align-items: flex-start;
+  }
+
+  .separator-color.footer-line {
+    margin-top: -51px;
   }
 
   .top-post {
@@ -1824,8 +2113,13 @@ figcaption {
   }
 
   .footer-small-text {
-    margin-top: 20px;
-    line-height: 18px;
+    margin-top: 0;
+    font-size: 6px;
+    line-height: 8px;
+  }
+
+  .container-footer {
+    height: 60px;
   }
 
   .h2.cc-title-section.cc-push-text {
@@ -1888,33 +2182,124 @@ figcaption {
     justify-content: flex-start;
     margin-top: 0;
   }
+
+  .top {
+    min-height: 300px;
+  }
+
+  .intro {
+    height: 5px;
+    min-height: 5px;
+  }
+
+  .container-4 {
+    min-height: auto;
+  }
+
+  .hero-heading {
+    font-size: 20px;
+    line-height: 24px;
+    top: -43%;
+  }
+
+  .slider {
+    max-height: 200px;
+  }
+
+  .hero-heading-2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  ._3-home-stories {
+    margin-bottom: -12px;
+  }
+
+  .grid-2 {
+    grid-template-rows: auto auto auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .grid-3 {
+    padding-bottom: 20px;
+  }
+
+  .type-label {
+    font-size: 8px;
+    line-height: 8px;
+  }
+
+  .title-label {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .author-label {
+    font-size: 8px;
+    line-height: 8px;
+  }
+
+  .container-9 {
+    width: 150px;
+    height: 100px;
+  }
+
+  .story-headline {
+    text-align: center;
+    flex: 0 auto;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 28px;
+    line-height: 32px;
+    position: relative;
+  }
+
+  .paragraph-2 {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .quick-stack {
+    margin: 10px;
+  }
+
+  .image-6 {
+    flex: 0 auto;
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 75px;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .image-11 {
+    left: 50px;
+  }
+
+  .container-17 {
+    width: 40%;
+    top: 149px;
+    right: 74px;
+  }
+
+  .container-18 {
+    right: -74px;
+  }
 }
 
-#w-node-_2c7ed736-7d2e-907e-d3fb-1166f3b9041e-0e81a7fe {
+#w-node-_2c7ed736-7d2e-907e-d3fb-1166f3b9041e-0e81a7fe, #w-node-_9475dd33-7cef-31e2-c4cb-3a31e0cd0f66-0e81a7fe {
   grid-template-rows: auto;
   grid-template-columns: 1fr 2.25fr;
-}
-
-#w-node-e06c06e1-2c8b-fbd0-f688-b6b440770956-0e81a7fe {
-  grid-template-rows: auto;
-  grid-template-columns: 3.75fr 2.25fr;
-}
-
-#w-node-_43197f03-f492-ca35-2384-d761b04da6eb-0e81a7fe {
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 2.25fr;
-}
-
-#w-node-fdab77d6-5a01-22ef-ca43-038bbd86e1a2-0e81a7fe {
-  grid-template-rows: auto;
-  grid-template-columns: 3.75fr 2.25fr;
 }
 
 #w-node-_6381afcf-bb0e-049a-0135-b3f4f681c31f-83fe414f {
   grid-area: Area;
 }
 
-#w-node-_06ab3c83-540c-ea5c-60c9-ab7b19c73b33-83fe414f, #w-node-_16c1b927-d849-f728-fbf8-8b9025f61855-83fe414f, #w-node-f1b13348-460b-bd18-f92b-c8aae1ac2489-83fe414f {
+#w-node-_939ea7a8-8e26-a45c-7e60-f15055d16730-83fe414f, #w-node-_06ab3c83-540c-ea5c-60c9-ab7b19c73b33-83fe414f, #w-node-_16c1b927-d849-f728-fbf8-8b9025f61855-83fe414f, #w-node-f1b13348-460b-bd18-f92b-c8aae1ac2489-83fe414f {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
@@ -1937,6 +2322,33 @@ figcaption {
 #w-node-d06fb6b1-84fb-37cb-ea7f-a5e9e6f59d09-6e5ab520 {
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr 1fr;
+}
+
+#w-node-_6381afcf-bb0e-049a-0135-b3f4f681c31f-2a8328d2 {
+  grid-area: Area;
+}
+
+#w-node-_939ea7a8-8e26-a45c-7e60-f15055d16730-2a8328d2, #w-node-_06ab3c83-540c-ea5c-60c9-ab7b19c73b33-2a8328d2, #w-node-_16c1b927-d849-f728-fbf8-8b9025f61855-2a8328d2, #w-node-f1b13348-460b-bd18-f92b-c8aae1ac2489-2a8328d2, #w-node-_27f84ef8-7b8b-b08b-23ba-4c711a196d94-2a8328d2, #w-node-_27f84ef8-7b8b-b08b-23ba-4c711a196d95-2a8328d2, #w-node-_27f84ef8-7b8b-b08b-23ba-4c711a196d9a-2a8328d2, #w-node-_7fbeb560-3f7c-bb50-be68-3ea24337f3f9-2a8328d2, #w-node-_7fbeb560-3f7c-bb50-be68-3ea24337f3fa-2a8328d2, #w-node-_7fbeb560-3f7c-bb50-be68-3ea24337f3ff-2a8328d2, #w-node-_4a98cc5e-c879-c6c8-910b-bf5ca6111876-2a8328d2, #w-node-_4a98cc5e-c879-c6c8-910b-bf5ca6111877-2a8328d2, #w-node-_4a98cc5e-c879-c6c8-910b-bf5ca611187c-2a8328d2 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+@media screen and (max-width: 991px) {
+  #w-node-_2c7ed736-7d2e-907e-d3fb-1166f3b9041e-0e81a7fe, #w-node-_9475dd33-7cef-31e2-c4cb-3a31e0cd0f66-0e81a7fe {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  #w-node-_939ea7a8-8e26-a45c-7e60-f15055d16730-2a8328d2 {
+    grid-area: span 1 / span 1 / span 1 / span 1;
+    place-self: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #w-node-_2c7ed736-7d2e-907e-d3fb-1166f3b9041e-0e81a7fe, #w-node-_9475dd33-7cef-31e2-c4cb-3a31e0cd0f66-0e81a7fe {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
 }
 
 
