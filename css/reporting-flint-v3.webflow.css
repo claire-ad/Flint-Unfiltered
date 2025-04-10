@@ -6697,7 +6697,9 @@ figcaption {
 
 .intro-graf {
   color: #fff;
+  text-align: center;
   -webkit-text-stroke-color: #222;
+  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
   font-family: Source Serif Pro, sans-serif;
@@ -6716,6 +6718,7 @@ figcaption {
   margin-left: -220px;
   position: relative;
   left: 50%;
+  right: 50%;
 }
 
 .title-logo-div {
@@ -6729,12 +6732,13 @@ figcaption {
 }
 
 .image-15 {
-  position: relative;
-  top: -500px;
+  position: absolute;
+  top: 70px;
   left: -8px;
 }
 
 .italic-text {
+  color: #fff;
   font-style: normal;
 }
 
@@ -6742,7 +6746,7 @@ figcaption {
   color: #fff;
   text-align: center;
   text-transform: none;
-  margin: 60px 40px 40px;
+  margin: 140px 40px 40px;
   font-family: Source Serif Pro, sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -7032,6 +7036,108 @@ figcaption {
   line-height: 2;
 }
 
+.heading-13 {
+  z-index: 1;
+  color: #3330;
+  text-align: center;
+  letter-spacing: .8vw;
+  margin-bottom: 40px;
+  padding-left: 4px;
+  font-family: Lato, sans-serif;
+  font-size: 16vw;
+  line-height: .8;
+  position: absolute;
+}
+
+.video-6 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.zoom-2 {
+  flex-direction: column;
+  justify-content: center;
+  width: 60vw;
+  padding-top: 10vh;
+  display: flex;
+  position: relative;
+}
+
+.sticky-div-2 {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.svg-3 {
+  width: 100%;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  position: relative;
+  box-shadow: inset 0 0 0 2px #eef7ff, 0 0 0 50vw #eff7ff;
+}
+
+.section-16 {
+  height: 100vh;
+  position: relative;
+}
+
+.section-16.hero {
+  height: 300vh;
+}
+
+.heading-14 {
+  z-index: 1;
+  color: #3330;
+  text-align: center;
+  letter-spacing: .8vw;
+  margin-bottom: 40px;
+  padding-left: 4px;
+  font-family: Lato, sans-serif;
+  font-size: 16vw;
+  line-height: .8;
+  position: absolute;
+}
+
+.video-7 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.zoom-3 {
+  flex-direction: column;
+  justify-content: center;
+  width: 60vw;
+  padding-top: 10vh;
+  display: flex;
+  position: relative;
+}
+
+.sticky-div-3 {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.section-17 {
+  height: 100vh;
+  position: relative;
+}
+
+.section-17.hero {
+  height: 300vh;
+}
+
 @media screen and (max-width: 991px) {
   .navigation {
     z-index: 999;
@@ -7190,7 +7296,8 @@ figcaption {
   }
 
   .our-program-container {
-    width: 100%;
+    width: 90%;
+    margin-right: 40px;
   }
 
   .team-collection-item {
@@ -7219,7 +7326,7 @@ figcaption {
   }
 
   .feature-stories {
-    margin-bottom: -54px;
+    margin-bottom: 60px;
   }
 
   .all-feature-grid {
@@ -7234,8 +7341,8 @@ figcaption {
   }
 
   .title-label {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 22px;
   }
 
   .home-feature-photo {
@@ -7261,8 +7368,8 @@ figcaption {
   .text-paragraph {
     text-align: left;
     width: 100%;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   .subheading {
@@ -7283,8 +7390,8 @@ figcaption {
   }
 
   .bio-pics {
-    margin-top: 20px;
-    padding-top: 40px;
+    margin-top: -45px;
+    padding-top: 0;
   }
 
   .menu-button-2 {
@@ -7849,7 +7956,7 @@ figcaption {
     aspect-ratio: auto;
     object-fit: cover;
     width: 240px;
-    height: 80px;
+    height: 100px;
     overflow: clip;
   }
 
@@ -7882,8 +7989,10 @@ figcaption {
   }
 
   .intro-graf {
-    text-align: left;
+    text-align: center;
     width: 100%;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   .class-pic {
@@ -7894,12 +8003,16 @@ figcaption {
   }
 
   .image-15 {
-    top: -430px;
+    top: 65px;
+  }
+
+  .home-intro-text {
+    margin-top: -9px;
   }
 
   .subtitle-label {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 14px;
   }
 
   .quick-stack-3 {
@@ -8135,17 +8248,21 @@ figcaption {
 
   .title-label {
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 10px;
     line-height: 20px;
   }
 
+  .author-label {
+    padding-top: 5px;
+  }
+
   .feature-image {
-    width: 130%;
+    width: 100%;
   }
 
   .story-headline {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 30px;
   }
 
   .story-header {
@@ -8648,7 +8765,15 @@ figcaption {
   }
 
   .home-feature-text {
-    height: 80px;
+    height: 100px;
+  }
+
+  .bold-text-2 {
+    margin-top: -189px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 28px;
+    line-height: 34px;
   }
 
   .features {
@@ -8694,6 +8819,7 @@ figcaption {
   }
 
   .button-inverted {
+    margin-bottom: 40px;
     margin-right: 0;
     padding: 14px 24px;
     position: relative;
@@ -8742,6 +8868,17 @@ figcaption {
     padding: 10px 16px 10px 14px;
   }
 
+  .background-video-2 {
+    box-sizing: border-box;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    width: 500px;
+    height: 300px;
+    margin-top: -15px;
+    margin-bottom: 60px;
+    padding-bottom: 0;
+  }
+
   .div-block-4 {
     margin-top: -54px;
     margin-left: -11px;
@@ -8762,22 +8899,32 @@ figcaption {
   }
 
   .intro-graf {
+    text-align: center;
     font-size: 14px;
     line-height: 18px;
   }
 
   .class-pic {
-    margin-left: 29px;
+    width: 80%;
+    margin-left: 50px;
   }
 
   .image-15 {
-    top: -380px;
+    position: absolute;
+    top: 146px;
+  }
+
+  .home-intro-text {
+    margin-top: 15px;
+    margin-bottom: 80px;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   .subtitle-label {
     padding-top: 0;
     padding-bottom: 0;
-    line-height: 20px;
+    line-height: 14px;
   }
 
   .quick-stack-3 {
@@ -8927,6 +9074,11 @@ figcaption {
     line-height: 24px;
   }
 
+  .our-program-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .team-collection-item, .contact-item-wrapper {
     width: 100%;
   }
@@ -9010,8 +9162,9 @@ figcaption {
   }
 
   .title-label {
-    font-size: 12px;
-    line-height: 16px;
+    padding-bottom: 0;
+    font-size: 20px;
+    line-height: 22px;
   }
 
   .author-label {
@@ -9029,9 +9182,10 @@ figcaption {
   }
 
   .story-headline {
-    color: #fff;
+    color: #000;
     text-align: center;
     flex: 0 auto;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 5px;
     font-size: 22px;
@@ -9073,14 +9227,14 @@ figcaption {
   }
 
   .quick-stack {
-    margin: 10px;
+    margin: 10px 10px 10px 20px;
   }
 
   .bio-pics {
     flex: 0 auto;
-    width: 30%;
-    margin-top: 20px;
-    margin-left: 75px;
+    width: 100%;
+    margin-top: -50px;
+    margin-left: 0;
     padding-top: 0;
     padding-left: 0;
   }
@@ -9330,7 +9484,11 @@ figcaption {
 
   .home-feature-text {
     width: 240px;
-    height: 60px;
+    height: 100px;
+  }
+
+  .bold-text-2 {
+    margin-top: -270px;
   }
 
   .timeline_text {
@@ -9376,6 +9534,11 @@ figcaption {
     top: 18px;
   }
 
+  .background-video-2 {
+    width: 290px;
+    height: 200px;
+  }
+
   .div-block-4 {
     margin-top: -48px;
     margin-left: -8px;
@@ -9401,18 +9564,30 @@ figcaption {
     top: -250px;
   }
 
+  .about-intro {
+    margin-top: -42px;
+  }
+
   .intro-graf {
+    text-align: center;
     font-size: 10px;
     line-height: 14px;
   }
 
+  .class-pic {
+    margin-left: 35px;
+  }
+
   .image-15 {
-    top: -330px;
-    left: 17px;
+    top: 65px;
+    left: 0;
   }
 
   .home-intro-text {
     color: #fff;
+    margin-top: -87px;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .subtitle-label {
@@ -9450,6 +9625,14 @@ figcaption {
 
   .audio-subtitle {
     font-size: 1rem;
+  }
+
+  .svg-3 {
+    box-shadow: inset 0 0 0 2px #eff7ff, 0 0 0 70vh #eff7ff;
+  }
+
+  .cell-3 {
+    padding-top: 0;
   }
 }
 
